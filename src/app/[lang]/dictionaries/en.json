@@ -53,6 +53,10 @@
     "video-speeder": {
       "name": "Video Speeder",
       "description": "Speed up or slow down video. Perfect for timelapse or detailed analysis."
+    },
+    "audio-extractor": {
+      "name": "Audio Extractor",
+      "description": "Extract audio from video. Rip MP3, WAV, AAC or OGG from any video file."
     }
   },
   "toolPage": {
@@ -219,12 +223,30 @@
     "formatTime": "{h}h {m}m {s}s",
     "formatTimeShort": "{m}:{s}"
   },
+  "audioExtractor": {
+    "dropHere": "DROP VIDEO HERE",
+    "clickToBrowse": "OR CLICK TO BROWSE",
+    "analyzing": "ANALYZING...",
+    "original": "ORIGINAL",
+    "duration": "Duration",
+    "size": "Size",
+    "formatLabel": "Format",
+    "quality": "Quality",
+    "extractIt": "EXTRACT AUDIO",
+    "extracting": "EXTRACTING...",
+    "extractSuccessful": "EXTRACT SUCCESSFUL",
+    "download": "DOWNLOAD",
+    "failed": "FAILED",
+    "formatTime": "{h}h {m}m {s}s",
+    "formatTimeShort": "{m}:{s}"
+  },
   "tags": {
     "json": "json", "format": "format", "minify": "minify", "validate": "validate",
     "image": "image", "compress": "compress", "webp": "webp", "jpg": "jpg", "png": "png", "avif": "avif", "resize": "resize",
     "regex": "regex", "pattern": "pattern", "debug": "debug", "test": "test", "match": "match",
     "video": "video", "trim": "trim", "cut": "cut", "mp4": "mp4", "webm": "webm", "clip": "clip", "slice": "slice",
-    "speed": "speed", "timelapse": "timelapse", "slowmo": "slow-mo", "fast": "fast", "slow": "slow"
+    "speed": "speed", "timelapse": "timelapse", "slowmo": "slow-mo", "fast": "fast", "slow": "slow",
+    "audio": "audio", "mp3": "mp3", "wav": "wav", "extract": "extract", "music": "music", "sound": "sound"
   },
   "langSwitcher": {
     "label": "中文"

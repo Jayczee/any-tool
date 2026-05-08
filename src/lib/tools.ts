@@ -55,6 +55,15 @@ export const tools: Tool[] = [
     type: 'frontend',
     color: 'var(--accent)',
     tags: ['video', 'speed', 'timelapse', 'slowmo', 'fast', 'slow']
+  },
+  {
+    id: 'audio-extractor',
+    name: 'Audio Extractor',
+    description: 'Extract audio from video. Rip MP3, WAV, AAC or OGG from any video file.',
+    categories: ['media', 'optimizers'],
+    type: 'frontend',
+    color: 'var(--secondary)',
+    tags: ['video', 'audio', 'mp3', 'wav', 'extract', 'music', 'sound']
   }
 ];
 

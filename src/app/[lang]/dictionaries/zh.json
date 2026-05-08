@@ -53,6 +53,10 @@
     "video-speeder": {
       "name": "视频变速器",
       "description": "加速或减速视频。适合延时摄影或细节分析。"
+    },
+    "audio-extractor": {
+      "name": "音频提取器",
+      "description": "从视频中提取音频。将任何视频文件转为 MP3、WAV、AAC 或 OGG。"
     }
   },
   "toolPage": {
@@ -219,12 +223,30 @@
     "formatTime": "{h}时{m}分{s}秒",
     "formatTimeShort": "{m}:{s}"
   },
+  "audioExtractor": {
+    "dropHere": "拖放视频到此处",
+    "clickToBrowse": "或点击选择文件",
+    "analyzing": "分析中...",
+    "original": "原始视频",
+    "duration": "时长",
+    "size": "大小",
+    "formatLabel": "格式",
+    "quality": "质量",
+    "extractIt": "提取音频",
+    "extracting": "提取中...",
+    "extractSuccessful": "提取成功",
+    "download": "下载",
+    "failed": "失败",
+    "formatTime": "{h}时{m}分{s}秒",
+    "formatTimeShort": "{m}:{s}"
+  },
   "tags": {
     "json": "JSON", "format": "格式化", "minify": "压缩", "validate": "校验",
     "image": "图片", "compress": "压缩", "webp": "WebP", "jpg": "JPG", "png": "PNG", "avif": "AVIF", "resize": "调整尺寸",
     "regex": "正则", "pattern": "模式", "debug": "调试", "test": "测试", "match": "匹配",
     "video": "视频", "trim": "裁剪", "cut": "切割", "mp4": "MP4", "webm": "WebM", "clip": "片段", "slice": "切片",
-    "speed": "变速", "timelapse": "延时", "slowmo": "慢动作", "fast": "加速", "slow": "减速"
+    "speed": "变速", "timelapse": "延时", "slowmo": "慢动作", "fast": "加速", "slow": "减速",
+    "audio": "音频", "mp3": "MP3", "wav": "WAV", "extract": "提取", "music": "音乐", "sound": "声音"
   },
   "langSwitcher": {
     "label": "EN"

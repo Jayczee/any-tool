@@ -7,6 +7,7 @@ import { ImageCrusher } from '@/components/tools/ImageCrusher';
 import { RegexLab } from '@/components/tools/RegexLab';
 import { VideoTrimmer } from '@/components/tools/VideoTrimmer';
 import { VideoSpeed } from '@/components/tools/VideoSpeed';
+import { AudioExtractor } from '@/components/tools/AudioExtractor';
 
 interface ToolPageProps {
   params: Promise<{ lang: string; id: string }>;
@@ -48,6 +49,8 @@ export default async function ToolPage({ params }: ToolPageProps) {
         return <VideoTrimmer labels={dict.videoTrimmer} />;
       case 'video-speeder':
         return <VideoSpeed labels={dict.videoSpeeder} />;
+      case 'audio-extractor':
+        return <AudioExtractor labels={dict.audioExtractor} />;
       default:
         return (
           <div style={{ padding: '4rem', textAlign: 'center' }}>
