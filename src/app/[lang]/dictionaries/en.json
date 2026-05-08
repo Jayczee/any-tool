@@ -61,6 +61,10 @@
     "request-sender": {
       "name": "Request Sender",
       "description": "HTTP client with curl import. Craft requests with headers, params, body, auth. See full responses."
+    },
+    "code-snapshot": {
+      "name": "Code Snapshot",
+      "description": "Turn code into beautiful screenshots. macOS or brutalist window chrome with syntax highlighting."
     }
   },
   "toolPage": {
@@ -304,6 +308,26 @@
     "errorParse": "Failed to parse curl command.",
     "privacyNote": "Data stored locally in your browser. Nothing is saved on the server."
   },
+  "codeSnapshot": {
+    "code": "Code",
+    "language": "Language",
+    "theme": "Theme",
+    "fontFamily": "Font",
+    "fontSize": "Size",
+    "lineNumbers": "Line Numbers",
+    "windowStyle": "Window Style",
+    "windowTitle": "Title",
+    "windowTheme": "Window Theme",
+    "padding": "Padding",
+    "capture": "CAPTURE & DOWNLOAD",
+    "copyImage": "COPY IMAGE",
+    "copied": "Copied!",
+    "macos": "macOS",
+    "brutalist": "Brutalist",
+    "dark": "Dark",
+    "light": "Light",
+    "placeholder": "Paste or type your code here..."
+  },
   "tags": {
     "json": "json", "format": "format", "minify": "minify", "validate": "validate",
     "image": "image", "compress": "compress", "webp": "webp", "jpg": "jpg", "png": "png", "avif": "avif", "resize": "resize",
@@ -311,7 +335,8 @@
     "video": "video", "trim": "trim", "cut": "cut", "mp4": "mp4", "webm": "webm", "clip": "clip", "slice": "slice",
     "speed": "speed", "timelapse": "timelapse", "slowmo": "slow-mo", "fast": "fast", "slow": "slow",
     "audio": "audio", "mp3": "mp3", "wav": "wav", "extract": "extract", "music": "music", "sound": "sound",
-    "http": "http", "api": "api", "curl": "curl", "request": "request", "rest": "rest", "fetch": "fetch", "post": "post", "get": "get"
+    "http": "http", "api": "api", "curl": "curl", "request": "request", "rest": "rest", "fetch": "fetch", "post": "post", "get": "get",
+    "code": "code", "screenshot": "screenshot", "highlight": "highlight", "export": "export", "png": "png", "share": "share"
   },
   "langSwitcher": {
     "label": "中文"

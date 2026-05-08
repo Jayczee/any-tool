@@ -9,6 +9,7 @@ import { VideoTrimmer } from '@/components/tools/VideoTrimmer';
 import { VideoSpeed } from '@/components/tools/VideoSpeed';
 import { AudioExtractor } from '@/components/tools/AudioExtractor';
 import { RequestSender } from '@/components/tools/RequestSender';
+import { CodeSnapshot } from '@/components/tools/CodeSnapshot';
 
 interface ToolPageProps {
   params: Promise<{ lang: string; id: string }>;
@@ -54,6 +55,8 @@ export default async function ToolPage({ params }: ToolPageProps) {
         return <AudioExtractor labels={dict.audioExtractor} />;
       case 'request-sender':
         return <RequestSender labels={dict.requestSender} />;
+      case 'code-snapshot':
+        return <CodeSnapshot labels={dict.codeSnapshot} />;
       default:
         return (
           <div style={{ padding: '4rem', textAlign: 'center' }}>

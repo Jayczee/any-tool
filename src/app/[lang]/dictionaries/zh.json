@@ -61,6 +61,10 @@
     "request-sender": {
       "name": "请求发送器",
       "description": "HTTP 客户端，支持 curl 导入。构建请求参数、头、请求体、认证，查看完整响应。"
+    },
+    "code-snapshot": {
+      "name": "代码截图",
+      "description": "将代码转为精美截图。macOS 或工具站风格窗口边框，语法高亮。"
     }
   },
   "toolPage": {
@@ -304,6 +308,26 @@
     "errorParse": "无法解析 curl 命令。",
     "privacyNote": "数据仅存储在浏览器本地，服务端不会保存任何请求数据。"
   },
+  "codeSnapshot": {
+    "code": "代码",
+    "language": "语言",
+    "theme": "主题",
+    "fontFamily": "字体",
+    "fontSize": "字号",
+    "lineNumbers": "行号",
+    "windowStyle": "窗口风格",
+    "windowTitle": "标题",
+    "windowTheme": "窗口主题",
+    "padding": "内边距",
+    "capture": "截图下载",
+    "copyImage": "复制图片",
+    "copied": "已复制！",
+    "macos": "macOS",
+    "brutalist": "工具站风格",
+    "dark": "暗色",
+    "light": "亮色",
+    "placeholder": "在此粘贴或输入代码..."
+  },
   "tags": {
     "json": "JSON", "format": "格式化", "minify": "压缩", "validate": "校验",
     "image": "图片", "compress": "压缩", "webp": "WebP", "jpg": "JPG", "png": "PNG", "avif": "AVIF", "resize": "调整尺寸",
@@ -311,7 +335,8 @@
     "video": "视频", "trim": "裁剪", "cut": "切割", "mp4": "MP4", "webm": "WebM", "clip": "片段", "slice": "切片",
     "speed": "变速", "timelapse": "延时", "slowmo": "慢动作", "fast": "加速", "slow": "减速",
     "audio": "音频", "mp3": "MP3", "wav": "WAV", "extract": "提取", "music": "音乐", "sound": "声音",
-    "http": "HTTP", "api": "API", "curl": "curl", "request": "请求", "rest": "REST", "fetch": "fetch", "post": "POST", "get": "GET"
+    "http": "HTTP", "api": "API", "curl": "curl", "request": "请求", "rest": "REST", "fetch": "fetch", "post": "POST", "get": "GET",
+    "code": "代码", "screenshot": "截图", "highlight": "高亮", "export": "导出", "png": "PNG", "share": "分享"
   },
   "langSwitcher": {
     "label": "EN"

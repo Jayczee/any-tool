@@ -73,6 +73,15 @@ export const tools: Tool[] = [
     type: 'fullstack',
     color: '#0070f3',
     tags: ['http', 'api', 'curl', 'request', 'rest', 'fetch', 'post', 'get']
+  },
+  {
+    id: 'code-snapshot',
+    name: 'Code Snapshot',
+    description: 'Turn code into beautiful screenshots. macOS or brutalist window chrome with syntax highlighting.',
+    categories: ['dev-tools', 'formatters'],
+    type: 'frontend',
+    color: 'var(--accent)',
+    tags: ['code', 'screenshot', 'highlight', 'image', 'export', 'png', 'share']
   }
 ];
 
