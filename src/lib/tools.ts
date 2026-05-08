@@ -37,6 +37,15 @@ export const tools: Tool[] = [
     type: 'frontend',
     color: '#0070f3',
     tags: ['regex', 'pattern', 'debug', 'test', 'match']
+  },
+  {
+    id: 'video-trimmer',
+    name: 'Video Slicer',
+    description: 'Trim video clips with precision. Cut out the good parts, leave the rest.',
+    categories: ['media', 'optimizers'],
+    type: 'frontend',
+    color: 'var(--secondary)',
+    tags: ['video', 'trim', 'cut', 'mp4', 'webm', 'clip', 'slice']
   }
 ];
 

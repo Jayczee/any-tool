@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { JsonFormatter } from '@/components/tools/JsonFormatter';
 import { ImageCrusher } from '@/components/tools/ImageCrusher';
 import { RegexLab } from '@/components/tools/RegexLab';
+import { VideoTrimmer } from '@/components/tools/VideoTrimmer';
 
 interface ToolPageProps {
   params: Promise<{ lang: string; id: string }>;
@@ -42,6 +43,8 @@ export default async function ToolPage({ params }: ToolPageProps) {
         return <ImageCrusher labels={dict.imageCrusher} />;
       case 'regex-tester':
         return <RegexLab labels={dict.regexLab} lang={lang} />;
+      case 'video-trimmer':
+        return <VideoTrimmer labels={dict.videoTrimmer} />;
       default:
         return (
           <div style={{ padding: '4rem', textAlign: 'center' }}>

@@ -45,6 +45,10 @@
     "regex-tester": {
       "name": "Regex Lab",
       "description": "Test your regex patterns in real-time. Debug complex regular expressions with ease."
+    },
+    "video-trimmer": {
+      "name": "Video Slicer",
+      "description": "Trim video clips with precision. Cut out the good parts, leave the rest."
     }
   },
   "toolPage": {
@@ -164,6 +168,33 @@
     "explainTab": "Tab character",
     "explainEscaped": "Escaped character: {c}",
     "explainCharClass": "Character class: {c}"
+  },
+  "videoTrimmer": {
+    "dropHere": "DROP VIDEO HERE",
+    "clickToBrowse": "OR CLICK TO BROWSE",
+    "analyzing": "ANALYZING...",
+    "original": "ORIGINAL",
+    "duration": "Duration",
+    "resolution": "Resolution",
+    "codec": "Codec",
+    "startTime": "Start Time",
+    "endTime": "End Time",
+    "setStart": "SET START",
+    "setEnd": "SET END",
+    "clippedDuration": "Clip Duration",
+    "formatLabel": "Format",
+    "modeFast": "Fast (stream copy)",
+    "modePrecise": "Precise (re-encode)",
+    "trimIt": "SLICE IT",
+    "trimming": "SLICING...",
+    "trimSuccessful": "SLICE SUCCESSFUL",
+    "before": "BEFORE",
+    "after": "AFTER",
+    "reduction": "Reduction",
+    "download": "DOWNLOAD",
+    "failed": "FAILED",
+    "formatTime": "{h}h {m}m {s}s",
+    "formatTimeShort": "{m}:{s}"
   },
   "langSwitcher": {
     "label": "中文"

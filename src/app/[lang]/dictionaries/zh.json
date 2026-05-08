@@ -45,6 +45,10 @@
     "regex-tester": {
       "name": "正则实验室",
       "description": "实时测试正则表达式模式。轻松调试复杂的正则表达式。"
+    },
+    "video-trimmer": {
+      "name": "视频切片机",
+      "description": "精准裁剪视频片段。保留精彩部分，去掉冗余。"
     }
   },
   "toolPage": {
@@ -164,6 +168,33 @@
     "explainTab": "制表符",
     "explainEscaped": "转义字符: {c}",
     "explainCharClass": "字符类: {c}"
+  },
+  "videoTrimmer": {
+    "dropHere": "拖放视频到此处",
+    "clickToBrowse": "或点击选择文件",
+    "analyzing": "分析中...",
+    "original": "原始视频",
+    "duration": "时长",
+    "resolution": "分辨率",
+    "codec": "编码",
+    "startTime": "起始时间",
+    "endTime": "结束时间",
+    "setStart": "设为起点",
+    "setEnd": "设为终点",
+    "clippedDuration": "裁剪时长",
+    "formatLabel": "格式",
+    "modeFast": "快速 (流拷贝)",
+    "modePrecise": "精确 (重编码)",
+    "trimIt": "开始裁剪",
+    "trimming": "裁剪中...",
+    "trimSuccessful": "裁剪成功",
+    "before": "裁剪前",
+    "after": "裁剪后",
+    "reduction": "缩减",
+    "download": "下载",
+    "failed": "失败",
+    "formatTime": "{h}时{m}分{s}秒",
+    "formatTimeShort": "{m}:{s}"
   },
   "langSwitcher": {
     "label": "EN"
