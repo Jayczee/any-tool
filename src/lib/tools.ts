@@ -64,6 +64,15 @@ export const tools: Tool[] = [
     type: 'frontend',
     color: 'var(--secondary)',
     tags: ['video', 'audio', 'mp3', 'wav', 'extract', 'music', 'sound']
+  },
+  {
+    id: 'request-sender',
+    name: 'Request Sender',
+    description: 'HTTP client with curl import. Craft requests with headers, params, body, auth. See full responses.',
+    categories: ['dev-tools', 'testers'],
+    type: 'fullstack',
+    color: '#0070f3',
+    tags: ['http', 'api', 'curl', 'request', 'rest', 'fetch', 'post', 'get']
   }
 ];
 

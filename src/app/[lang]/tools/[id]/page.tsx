@@ -8,6 +8,7 @@ import { RegexLab } from '@/components/tools/RegexLab';
 import { VideoTrimmer } from '@/components/tools/VideoTrimmer';
 import { VideoSpeed } from '@/components/tools/VideoSpeed';
 import { AudioExtractor } from '@/components/tools/AudioExtractor';
+import { RequestSender } from '@/components/tools/RequestSender';
 
 interface ToolPageProps {
   params: Promise<{ lang: string; id: string }>;
@@ -51,6 +52,8 @@ export default async function ToolPage({ params }: ToolPageProps) {
         return <VideoSpeed labels={dict.videoSpeeder} />;
       case 'audio-extractor':
         return <AudioExtractor labels={dict.audioExtractor} />;
+      case 'request-sender':
+        return <RequestSender labels={dict.requestSender} />;
       default:
         return (
           <div style={{ padding: '4rem', textAlign: 'center' }}>
