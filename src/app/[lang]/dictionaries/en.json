@@ -8,6 +8,9 @@
     "heroLine2": "TOOL",
     "subtitle": "A collection of high-impact, production-grade tools for modern builders. No fluff, just utility.",
     "betaBadge": "BETA 0.1",
+    "searchPlaceholder": "Search tools...",
+    "browseAll": "BROWSE ALL TOOLS",
+    "noResults": "No tools found",
     "footer": {
       "tagline": "BUILT FOR SPEED",
       "github": "GITHUB",
@@ -15,21 +18,33 @@
       "docs": "DOCS"
     }
   },
+  "categories": {
+    "dev-tools": "Dev Tools",
+    "formatters": "Formatters",
+    "media": "Media",
+    "optimizers": "Optimizers",
+    "testers": "Testers"
+  },
+  "browse": {
+    "title": "All Tools",
+    "back": "← Back",
+    "searchPlaceholder": "Filter by name, description, tag...",
+    "categories": "Categories",
+    "noResults": "No matching tools",
+    "toggleSidebar": "Filters"
+  },
   "tools": {
     "json-formatter": {
       "name": "JSON Formatter",
-      "description": "Clean up your messy JSON with zero lag. Formats, minifies, and validates your JSON data.",
-      "category": "Dev Tools"
+      "description": "Clean up your messy JSON with zero lag. Formats, minifies, and validates your JSON data."
     },
     "image-optimizer": {
       "name": "Image Crusher",
-      "description": "Bulk compress images using server-side magic. Reduces file size without compromising quality.",
-      "category": "Media"
+      "description": "Bulk compress images using server-side magic. Reduces file size without compromising quality."
     },
     "regex-tester": {
       "name": "Regex Lab",
-      "description": "Test your regex patterns in real-time. Debug complex regular expressions with ease.",
-      "category": "Dev Tools"
+      "description": "Test your regex patterns in real-time. Debug complex regular expressions with ease."
     }
   },
   "toolPage": {

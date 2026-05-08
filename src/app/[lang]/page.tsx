@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import { getDictionary, hasLocale } from './dictionaries';
 import { tools } from '@/lib/tools';
 import { LangSwitcher } from '@/components/LangSwitcher';
+import { SearchBox } from '@/components/SearchBox';
+import { ToolCard } from '@/components/ToolCard';
 
 interface HomePageProps {
   params: Promise<{ lang: string }>;
@@ -18,13 +20,32 @@ export default async function Home({ params }: HomePageProps) {
     <main style={{ padding: '4rem 2rem', maxWidth: '1200px', margin: '0 auto' }}>
       <LangSwitcher currentLang={lang} />
 
-      <header style={{ marginBottom: '6rem', position: 'relative' }}>
+      <header style={{ marginBottom: '4rem', position: 'relative' }}>
         <h1 style={{ fontSize: 'clamp(3rem, 10vw, 8rem)', lineHeight: '0.9', marginBottom: '1rem' }}>
           {dict.home.heroLine1}<br /><span style={{ color: 'var(--accent)' }}>{dict.home.heroLine2}</span>
         </h1>
-        <p style={{ fontSize: '1.5rem', maxWidth: '600px', fontWeight: '500' }}>
+        <p style={{ fontSize: '1.5rem', maxWidth: '600px', fontWeight: '500', marginBottom: '2rem' }}>
           {dict.home.subtitle}
         </p>
+
+        <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' }}>
+          <SearchBox
+            tools={tools}
+            lang={lang}
+            placeholder={dict.home.searchPlaceholder}
+            noResults={dict.home.noResults}
+            categories={dict.categories}
+            variant="home"
+            dict={dict.tools}
+          />
+          <Link
+            href={`/${lang}/tools`}
+            className="brutalist-button"
+            style={{ background: 'black', color: 'white', whiteSpace: 'nowrap', textDecoration: 'none' }}
+          >
+            {dict.home.browseAll}
+          </Link>
+        </div>
 
         <div style={{
           position: 'absolute',
@@ -51,24 +72,15 @@ export default async function Home({ params }: HomePageProps) {
           const t = dict.tools[tool.id as keyof typeof dict.tools];
           const typeLabel = tool.type === 'frontend' ? dict.toolPage.type : dict.toolPage.typeFullstack;
           return (
-            <Link key={tool.id} href={`/${lang}/tools/${tool.id}`} style={{ display: 'block' }}>
-              <div className="brutalist-card" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-                <div style={{
-                  fontSize: '0.8rem',
-                  fontWeight: '800',
-                  textTransform: 'uppercase',
-                  color: tool.color,
-                  marginBottom: '1rem'
-                }}>
-                  {t?.category ?? tool.category} // {typeLabel}
-                </div>
-                <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>{t?.name ?? tool.name}</h2>
-                <p style={{ marginBottom: '2rem', flexGrow: 1, opacity: 0.8 }}>{t?.description ?? tool.description}</p>
-                <span className="brutalist-button" style={{ textAlign: 'center', alignSelf: 'flex-start', display: 'inline-block' }}>
-                  Launch
-                </span>
-              </div>
-            </Link>
+            <ToolCard
+              key={tool.id}
+              tool={tool}
+              lang={lang}
+              name={t?.name ?? tool.name}
+              description={t?.description ?? tool.description}
+              categories={tool.categories.map((catId) => dict.categories[catId as keyof typeof dict.categories] ?? catId)}
+              typeLabel={typeLabel}
+            />
           );
         })}
       </section>

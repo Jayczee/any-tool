@@ -63,10 +63,30 @@ export default async function ToolPage({ params }: ToolPageProps) {
           fontWeight: '800',
           textTransform: 'uppercase',
           color: tool.color,
-          marginBottom: '0.5rem'
+          marginBottom: '0.5rem',
+          display: 'flex',
+          gap: '0.5rem',
+          flexWrap: 'wrap'
         }}>
-          {t?.category ?? tool.category} // {typeLabel}
+          {tool.categories.map((catId) => (
+            <span key={catId}>{dict.categories[catId as keyof typeof dict.categories] ?? catId}</span>
+          ))} // {typeLabel}
         </div>
+        {tool.tags.length > 0 && (
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginBottom: '0.5rem' }}>
+            {tool.tags.map((tag) => (
+              <span key={tag} style={{
+                fontSize: '0.65rem',
+                fontWeight: '700',
+                textTransform: 'uppercase',
+                padding: '0.15rem 0.5rem',
+                border: '2px solid var(--border)',
+              }}>
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
         <h1 style={{ fontSize: '4rem', marginBottom: '1rem' }}>{t?.name ?? tool.name}</h1>
         <p style={{ fontSize: '1.2rem', maxWidth: '800px', opacity: 0.8 }}>{t?.description ?? tool.description}</p>
       </header>
