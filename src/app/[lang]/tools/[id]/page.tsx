@@ -6,6 +6,7 @@ import { JsonFormatter } from '@/components/tools/JsonFormatter';
 import { ImageCrusher } from '@/components/tools/ImageCrusher';
 import { RegexLab } from '@/components/tools/RegexLab';
 import { VideoTrimmer } from '@/components/tools/VideoTrimmer';
+import { VideoSpeed } from '@/components/tools/VideoSpeed';
 
 interface ToolPageProps {
   params: Promise<{ lang: string; id: string }>;
@@ -45,6 +46,8 @@ export default async function ToolPage({ params }: ToolPageProps) {
         return <RegexLab labels={dict.regexLab} lang={lang} />;
       case 'video-trimmer':
         return <VideoTrimmer labels={dict.videoTrimmer} />;
+      case 'video-speeder':
+        return <VideoSpeed labels={dict.videoSpeeder} />;
       default:
         return (
           <div style={{ padding: '4rem', textAlign: 'center' }}>
@@ -88,7 +91,7 @@ export default async function ToolPage({ params }: ToolPageProps) {
                 padding: '0.15rem 0.5rem',
                 border: '2px solid var(--border)',
               }}>
-                {tag}
+                {dict.tags[tag as keyof typeof dict.tags] ?? tag}
               </span>
             ))}
           </div>

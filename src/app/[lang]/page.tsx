@@ -35,6 +35,7 @@ export default async function Home({ params }: HomePageProps) {
             placeholder={dict.home.searchPlaceholder}
             noResults={dict.home.noResults}
             categories={dict.categories}
+            tagLabels={dict.tags}
             variant="home"
             dict={dict.tools}
           />
@@ -79,6 +80,7 @@ export default async function Home({ params }: HomePageProps) {
               name={t?.name ?? tool.name}
               description={t?.description ?? tool.description}
               categories={tool.categories.map((catId) => dict.categories[catId as keyof typeof dict.categories] ?? catId)}
+              tagLabels={dict.tags}
               typeLabel={typeLabel}
             />
           );

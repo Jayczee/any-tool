@@ -10,6 +10,7 @@ interface SearchBoxProps {
   placeholder: string;
   noResults: string;
   categories: Record<string, string>;
+  tagLabels: Record<string, string>;
   variant: 'home' | 'page';
   onSearch?: (query: string) => void;
   dict: Record<string, { name: string; description: string }>;
@@ -25,7 +26,8 @@ interface SearchResult {
 function searchTools(
   tools: Tool[],
   query: string,
-  dict: Record<string, { name: string; description: string }>
+  dict: Record<string, { name: string; description: string }>,
+  tagLabels: Record<string, string>
 ): SearchResult[] {
   const q = query.toLowerCase().trim();
   if (q.length < 2) return [];
@@ -39,7 +41,7 @@ function searchTools(
 
     if (t.name.toLowerCase().includes(q)) score += 3;
     for (const tag of tool.tags) {
-      if (tag.toLowerCase().includes(q)) score += 2;
+      if (tag.toLowerCase().includes(q) || (tagLabels[tag] || '').toLowerCase().includes(q)) score += 2;
     }
     if (t.description.toLowerCase().includes(q)) score += 1;
 
@@ -52,7 +54,7 @@ function searchTools(
   return results;
 }
 
-export function SearchBox({ tools, lang, placeholder, noResults, categories, variant, onSearch, dict }: SearchBoxProps) {
+export function SearchBox({ tools, lang, placeholder, noResults, categories, tagLabels, variant, onSearch, dict }: SearchBoxProps) {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -65,7 +67,7 @@ export function SearchBox({ tools, lang, placeholder, noResults, categories, var
       onSearch?.(value);
       return;
     }
-    const r = searchTools(tools, value, dict);
+    const r = searchTools(tools, value, dict, tagLabels);
     setResults(r);
     setIsOpen(value.length >= 2);
   }, [variant, onSearch, tools, dict]);

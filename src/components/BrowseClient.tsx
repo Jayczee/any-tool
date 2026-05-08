@@ -16,11 +16,12 @@ interface BrowseClientProps {
     toggleLabel: string;
   };
   categories: Record<string, string>;
+  tagLabels: Record<string, string>;
   toolDict: Record<string, { name: string; description: string }>;
   typeLabels: { frontend: string; fullstack: string };
 }
 
-export function BrowseClient({ tools, lang, dict, categories, toolDict, typeLabels }: BrowseClientProps) {
+export function BrowseClient({ tools, lang, dict, categories, tagLabels, toolDict, typeLabels }: BrowseClientProps) {
   const [query, setQuery] = useState('');
   const [activeCategories, setActiveCategories] = useState<string[]>([]);
 
@@ -48,7 +49,7 @@ export function BrowseClient({ tools, lang, dict, categories, toolDict, typeLabe
 
       if (t.name.toLowerCase().includes(q)) return true;
       if (t.description.toLowerCase().includes(q)) return true;
-      if (tool.tags.some((tag) => tag.toLowerCase().includes(q))) return true;
+      if (tool.tags.some((tag) => tag.toLowerCase().includes(q) || (tagLabels[tag] || '').toLowerCase().includes(q))) return true;
 
       return false;
     });
@@ -63,6 +64,7 @@ export function BrowseClient({ tools, lang, dict, categories, toolDict, typeLabe
           placeholder={dict.searchPlaceholder}
           noResults={dict.noResults}
           categories={categories}
+          tagLabels={tagLabels}
           variant="page"
           onSearch={setQuery}
           dict={toolDict}
@@ -109,6 +111,7 @@ export function BrowseClient({ tools, lang, dict, categories, toolDict, typeLabe
                     name={t?.name ?? tool.name}
                     description={t?.description ?? tool.description}
                     categories={tool.categories.map((catId) => categories[catId] ?? catId)}
+                    tagLabels={tagLabels}
                     typeLabel={typeLabel}
                   />
                 );

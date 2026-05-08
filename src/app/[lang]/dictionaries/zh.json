@@ -49,6 +49,10 @@
     "video-trimmer": {
       "name": "视频切片机",
       "description": "精准裁剪视频片段。保留精彩部分，去掉冗余。"
+    },
+    "video-speeder": {
+      "name": "视频变速器",
+      "description": "加速或减速视频。适合延时摄影或细节分析。"
     }
   },
   "toolPage": {
@@ -195,6 +199,32 @@
     "failed": "失败",
     "formatTime": "{h}时{m}分{s}秒",
     "formatTimeShort": "{m}:{s}"
+  },
+  "videoSpeeder": {
+    "dropHere": "拖放视频到此处",
+    "clickToBrowse": "或点击选择文件",
+    "analyzing": "分析中...",
+    "original": "原始视频",
+    "duration": "时长",
+    "resolution": "分辨率",
+    "speed": "倍速",
+    "keepAudio": "保留音频",
+    "speedIt": "开始变速",
+    "speeding": "处理中...",
+    "speedSuccessful": "变速成功",
+    "before": "变速前",
+    "after": "变速后",
+    "download": "下载",
+    "failed": "失败",
+    "formatTime": "{h}时{m}分{s}秒",
+    "formatTimeShort": "{m}:{s}"
+  },
+  "tags": {
+    "json": "JSON", "format": "格式化", "minify": "压缩", "validate": "校验",
+    "image": "图片", "compress": "压缩", "webp": "WebP", "jpg": "JPG", "png": "PNG", "avif": "AVIF", "resize": "调整尺寸",
+    "regex": "正则", "pattern": "模式", "debug": "调试", "test": "测试", "match": "匹配",
+    "video": "视频", "trim": "裁剪", "cut": "切割", "mp4": "MP4", "webm": "WebM", "clip": "片段", "slice": "切片",
+    "speed": "变速", "timelapse": "延时", "slowmo": "慢动作", "fast": "加速", "slow": "减速"
   },
   "langSwitcher": {
     "label": "EN"

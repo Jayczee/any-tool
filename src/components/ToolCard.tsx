@@ -8,9 +8,10 @@ interface ToolCardProps {
   description: string;
   categories: string[];
   typeLabel: string;
+  tagLabels: Record<string, string>;
 }
 
-export function ToolCard({ tool, lang, name, description, categories, typeLabel }: ToolCardProps) {
+export function ToolCard({ tool, lang, name, description, categories, typeLabel, tagLabels }: ToolCardProps) {
   return (
     <Link href={`/${lang}/tools/${tool.id}`} style={{ display: 'block' }}>
       <div className="brutalist-card" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
@@ -42,7 +43,7 @@ export function ToolCard({ tool, lang, name, description, categories, typeLabel 
                 border: '2px solid var(--border)',
                 background: 'var(--bg)',
               }}>
-                {tag}
+                {tagLabels[tag] ?? tag}
               </span>
             ))}
           </div>

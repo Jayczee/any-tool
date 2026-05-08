@@ -46,6 +46,15 @@ export const tools: Tool[] = [
     type: 'frontend',
     color: 'var(--secondary)',
     tags: ['video', 'trim', 'cut', 'mp4', 'webm', 'clip', 'slice']
+  },
+  {
+    id: 'video-speeder',
+    name: 'Video Speeder',
+    description: 'Speed up or slow down video. Perfect for timelapse or detailed analysis.',
+    categories: ['media', 'optimizers'],
+    type: 'frontend',
+    color: 'var(--accent)',
+    tags: ['video', 'speed', 'timelapse', 'slowmo', 'fast', 'slow']
   }
 ];
 

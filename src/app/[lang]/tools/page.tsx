@@ -53,6 +53,7 @@ export default async function BrowsePage({ params }: BrowsePageProps) {
           toggleLabel: dict.browse.toggleSidebar,
         }}
         categories={dict.categories}
+        tagLabels={dict.tags}
         toolDict={dict.tools}
         typeLabels={{ frontend: dict.toolPage.type, fullstack: dict.toolPage.typeFullstack }}
       />
