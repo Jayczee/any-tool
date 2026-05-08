@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "title": "ANY-TOOL | Bold Utilities",
+    "description": "A collection of high-impact tools for high-performance humans."
+  },
+  "home": {
+    "heroLine1": "ANY",
+    "heroLine2": "TOOL",
+    "subtitle": "A collection of high-impact, production-grade tools for modern builders. No fluff, just utility.",
+    "betaBadge": "BETA 0.1",
+    "footer": {
+      "tagline": "BUILT FOR SPEED",
+      "github": "GITHUB",
+      "twitter": "TWITTER",
+      "docs": "DOCS"
+    }
+  },
+  "tools": {
+    "json-formatter": {
+      "name": "JSON Formatter",
+      "description": "Clean up your messy JSON with zero lag. Formats, minifies, and validates your JSON data.",
+      "category": "Dev Tools"
+    },
+    "image-optimizer": {
+      "name": "Image Crusher",
+      "description": "Bulk compress images using server-side magic. Reduces file size without compromising quality.",
+      "category": "Media"
+    },
+    "regex-tester": {
+      "name": "Regex Lab",
+      "description": "Test your regex patterns in real-time. Debug complex regular expressions with ease.",
+      "category": "Dev Tools"
+    }
+  },
+  "toolPage": {
+    "backToGallery": "Back to Gallery",
+    "underConstruction": "Tool Under Construction",
+    "underConstructionDesc": "We are working hard to bring {name} to life.",
+    "type": "frontend",
+    "typeFullstack": "fullstack"
+  },
+  "jsonFormatter": {
+    "input": "INPUT",
+    "output": "OUTPUT",
+    "placeholder": "Paste your messy JSON here...",
+    "format": "FORMAT",
+    "minify": "MINIFY",
+    "clear": "CLEAR",
+    "copyToClipboard": "COPY TO CLIPBOARD",
+    "errorPrefix": "ERROR"
+  },
+  "imageCrusher": {
+    "dropHere": "DROP IMAGE HERE",
+    "clickToBrowse": "OR CLICK TO BROWSE",
+    "analyzing": "ANALYZING...",
+    "original": "ORIGINAL",
+    "width": "WIDTH",
+    "height": "HEIGHT",
+    "lockAspect": "LOCK RATIO",
+    "unlockAspect": "UNLOCK",
+    "quality": "QUALITY",
+    "formatLabel": "FORMAT",
+    "formatAuto": "AUTO",
+    "crushIt": "CRUSH IT",
+    "crushing": "CRUSHING...",
+    "crushSuccessful": "CRUSH SUCCESSFUL",
+    "before": "BEFORE",
+    "after": "AFTER",
+    "reduction": "REDUCTION",
+    "download": "DOWNLOAD",
+    "failed": "FAILED",
+    "noteResultLarger": "Result was larger ({size}). Original kept — already optimally compressed."
+  },
+  "langSwitcher": {
+    "label": "中文"
+  }
+}

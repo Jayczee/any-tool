@@ -3,7 +3,18 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export function JsonFormatter() {
+interface JsonFormatterLabels {
+  input: string;
+  output: string;
+  placeholder: string;
+  format: string;
+  minify: string;
+  clear: string;
+  copyToClipboard: string;
+  errorPrefix: string;
+}
+
+export function JsonFormatter({ labels }: { labels: JsonFormatterLabels }) {
   const [input, setInput] = useState('');
   const [output, setOutput] = useState('');
   const [error, setError] = useState<string | null>(null);
@@ -38,18 +49,18 @@ export function JsonFormatter() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '600px' }}>
-      <div style={{ 
-        display: 'grid', 
-        gridTemplateColumns: '1fr 1fr', 
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
         borderBottom: 'var(--border-width) solid var(--border)',
         minHeight: '500px'
       }}>
         <div style={{ borderRight: 'var(--border-width) solid var(--border)', padding: '1rem', display: 'flex', flexDirection: 'column' }}>
-          <label style={{ fontWeight: '800', marginBottom: '0.5rem', display: 'block' }}>INPUT</label>
+          <label style={{ fontWeight: '800', marginBottom: '0.5rem', display: 'block' }}>{labels.input}</label>
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Paste your messy JSON here..."
+            placeholder={labels.placeholder}
             style={{
               flexGrow: 1,
               width: '100%',
@@ -64,7 +75,7 @@ export function JsonFormatter() {
           />
         </div>
         <div style={{ padding: '1rem', display: 'flex', flexDirection: 'column', background: 'rgba(0,0,0,0.02)' }}>
-          <label style={{ fontWeight: '800', marginBottom: '0.5rem', display: 'block' }}>OUTPUT</label>
+          <label style={{ fontWeight: '800', marginBottom: '0.5rem', display: 'block' }}>{labels.output}</label>
           <div style={{ flexGrow: 1, position: 'relative' }}>
             <textarea
               readOnly
@@ -99,28 +110,28 @@ export function JsonFormatter() {
                     border: '2px solid black'
                   }}
                 >
-                  ERROR: {error}
+                  {labels.errorPrefix}: {error}
                 </motion.div>
               )}
             </AnimatePresence>
           </div>
         </div>
       </div>
-      
+
       <div style={{ padding: '1.5rem', display: 'flex', gap: '1rem', alignItems: 'center', background: 'var(--bg)' }}>
-        <button onClick={formatJson} className="brutalist-button">FORMAT</button>
-        <button onClick={minifyJson} className="brutalist-button" style={{ background: 'var(--secondary)', color: 'black' }}>MINIFY</button>
-        <button 
-          onClick={() => { setInput(''); setOutput(''); setError(null); }} 
-          className="brutalist-button" 
+        <button onClick={formatJson} className="brutalist-button">{labels.format}</button>
+        <button onClick={minifyJson} className="brutalist-button" style={{ background: 'var(--secondary)', color: 'black' }}>{labels.minify}</button>
+        <button
+          onClick={() => { setInput(''); setOutput(''); setError(null); }}
+          className="brutalist-button"
           style={{ background: 'white', color: 'black' }}
         >
-          CLEAR
+          {labels.clear}
         </button>
         <div style={{ flexGrow: 1 }} />
         {output && (
           <button onClick={copyToClipboard} className="brutalist-button" style={{ background: 'black', color: 'white' }}>
-            COPY TO CLIPBOARD
+            {labels.copyToClipboard}
           </button>
         )}
       </div>

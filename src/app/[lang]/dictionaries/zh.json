@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "title": "ANY-TOOL | 硬核工具集",
+    "description": "为高效能构建者打造的高冲击力工具集合。"
+  },
+  "home": {
+    "heroLine1": "ANY",
+    "heroLine2": "TOOL",
+    "subtitle": "为现代构建者打造的高冲击力、生产级工具集。拒绝花哨，只求实用。",
+    "betaBadge": "测试 0.1",
+    "footer": {
+      "tagline": "为速度而生",
+      "github": "GITHUB",
+      "twitter": "TWITTER",
+      "docs": "文档"
+    }
+  },
+  "tools": {
+    "json-formatter": {
+      "name": "JSON 格式化",
+      "description": "零延迟清理混乱的 JSON 数据。支持格式化、压缩和校验。",
+      "category": "开发工具"
+    },
+    "image-optimizer": {
+      "name": "图片粉碎机",
+      "description": "通过服务端魔法批量压缩图片。在不牺牲质量的前提下大幅减小文件体积。",
+      "category": "媒体"
+    },
+    "regex-tester": {
+      "name": "正则实验室",
+      "description": "实时测试正则表达式模式。轻松调试复杂的正则表达式。",
+      "category": "开发工具"
+    }
+  },
+  "toolPage": {
+    "backToGallery": "返回工具集",
+    "underConstruction": "工具开发中",
+    "underConstructionDesc": "我们正在努力将 {name} 带到你面前。",
+    "type": "前端",
+    "typeFullstack": "全栈"
+  },
+  "jsonFormatter": {
+    "input": "输入",
+    "output": "输出",
+    "placeholder": "在此粘贴你的 JSON 数据...",
+    "format": "格式化",
+    "minify": "压缩",
+    "clear": "清空",
+    "copyToClipboard": "复制到剪贴板",
+    "errorPrefix": "错误"
+  },
+  "imageCrusher": {
+    "dropHere": "拖放图片到此处",
+    "clickToBrowse": "或点击选择文件",
+    "analyzing": "分析中...",
+    "original": "原图",
+    "width": "宽度",
+    "height": "高度",
+    "lockAspect": "锁定比例",
+    "unlockAspect": "解锁",
+    "quality": "压缩质量",
+    "formatLabel": "格式",
+    "formatAuto": "自动",
+    "crushIt": "开始压缩",
+    "crushing": "压缩中...",
+    "crushSuccessful": "压缩成功",
+    "before": "压缩前",
+    "after": "压缩后",
+    "reduction": "减少",
+    "download": "下载",
+    "failed": "失败",
+    "noteResultLarger": "压缩结果更大（{size}）。已保留原图 —— 原图已是最优压缩。"
+  },
+  "langSwitcher": {
+    "label": "EN"
+  }
+}
