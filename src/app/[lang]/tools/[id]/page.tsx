@@ -4,6 +4,7 @@ import { getDictionary, hasLocale, type Dictionary } from '../../dictionaries';
 import Link from 'next/link';
 import { JsonFormatter } from '@/components/tools/JsonFormatter';
 import { ImageCrusher } from '@/components/tools/ImageCrusher';
+import { RegexLab } from '@/components/tools/RegexLab';
 
 interface ToolPageProps {
   params: Promise<{ lang: string; id: string }>;
@@ -39,6 +40,8 @@ export default async function ToolPage({ params }: ToolPageProps) {
         return <JsonFormatter labels={dict.jsonFormatter} />;
       case 'image-optimizer':
         return <ImageCrusher labels={dict.imageCrusher} />;
+      case 'regex-tester':
+        return <RegexLab labels={dict.regexLab} lang={lang} />;
       default:
         return (
           <div style={{ padding: '4rem', textAlign: 'center' }}>
