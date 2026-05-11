@@ -4,7 +4,6 @@ import { getDictionary, hasLocale } from './dictionaries';
 import { tools } from '@/lib/tools';
 import { LangSwitcher } from '@/components/LangSwitcher';
 import { SearchBox } from '@/components/SearchBox';
-import { ToolCard } from '@/components/ToolCard';
 
 interface HomePageProps {
   params: Promise<{ lang: string }>;
@@ -17,14 +16,14 @@ export default async function Home({ params }: HomePageProps) {
   const dict = await getDictionary(lang);
 
   return (
-    <main style={{ padding: '4rem 2rem', maxWidth: '1200px', margin: '0 auto' }}>
+    <main style={{ padding: '6rem 2rem', maxWidth: '900px', margin: '0 auto' }}>
       <LangSwitcher currentLang={lang} />
 
-      <header style={{ marginBottom: '4rem', position: 'relative' }}>
+      <header>
         <h1 style={{ fontSize: 'clamp(3rem, 10vw, 8rem)', lineHeight: '0.9', marginBottom: '1rem' }}>
           {dict.home.heroLine1}<br /><span style={{ color: 'var(--accent)' }}>{dict.home.heroLine2}</span>
         </h1>
-        <p style={{ fontSize: '1.5rem', maxWidth: '600px', fontWeight: '500', marginBottom: '2rem' }}>
+        <p style={{ fontSize: '1.5rem', maxWidth: '600px', fontWeight: '500', marginBottom: '2.5rem' }}>
           {dict.home.subtitle}
         </p>
 
@@ -47,40 +46,11 @@ export default async function Home({ params }: HomePageProps) {
             {dict.home.browseAll}
           </Link>
         </div>
-
       </header>
 
-      <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '2.5rem' }}>
-        {tools.map((tool) => {
-          const t = dict.tools[tool.id as keyof typeof dict.tools];
-          const typeLabel = tool.type === 'frontend' ? dict.toolPage.type : dict.toolPage.typeFullstack;
-          return (
-            <ToolCard
-              key={tool.id}
-              tool={tool}
-              lang={lang}
-              name={t?.name ?? tool.name}
-              description={t?.description ?? tool.description}
-              categories={tool.categories.map((catId) => dict.categories[catId as keyof typeof dict.categories] ?? catId)}
-              tagLabels={dict.tags}
-              typeLabel={typeLabel}
-            />
-          );
-        })}
-      </section>
-
-      <footer style={{ marginTop: '10rem', padding: '4rem 0', borderTop: 'var(--border-width) solid var(--border)' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
-          <div>
-            <h3 style={{ fontSize: '2rem' }}>ANY-TOOL</h3>
-            <p>© 2026 {dict.home.footer.tagline}</p>
-          </div>
-          <div style={{ display: 'flex', gap: '2rem', fontWeight: '700' }}>
-            <a href="#">{dict.home.footer.github}</a>
-            <a href="#">{dict.home.footer.twitter}</a>
-            <a href="#">{dict.home.footer.docs}</a>
-          </div>
-        </div>
+      <footer style={{ marginTop: '8rem', paddingTop: '2rem', borderTop: 'var(--border-width) solid var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <span style={{ fontSize: '0.75rem', fontWeight: '800', textTransform: 'uppercase', opacity: 0.4 }}>ANY-TOOL</span>
+        <a href="https://github.com/Jayczee/any-tool" target="_blank" style={{ fontWeight: '800', fontSize: '0.75rem', opacity: 0.5 }}>GitHub →</a>
       </footer>
     </main>
   );
