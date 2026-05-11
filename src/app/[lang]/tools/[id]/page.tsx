@@ -12,6 +12,7 @@ import { RequestSender } from '@/components/tools/RequestSender';
 import { CodeSnapshot } from '@/components/tools/CodeSnapshot';
 import { ImageConverter } from '@/components/tools/ImageConverter';
 import { SubConverter } from '@/components/tools/SubConverter';
+import { NginxEditor } from '@/components/tools/NginxEditor';
 import { LangSwitcher } from '@/components/LangSwitcher';
 
 interface ToolPageProps {
@@ -64,6 +65,8 @@ export default async function ToolPage({ params }: ToolPageProps) {
         return <ImageConverter labels={dict.imageConverter} />;
       case 'subconverter':
         return <SubConverter labels={dict.subConverter} />;
+      case 'nginx-editor':
+        return <NginxEditor labels={dict.nginxEditor} />;
       default:
         return (
           <div style={{ padding: '4rem', textAlign: 'center' }}>

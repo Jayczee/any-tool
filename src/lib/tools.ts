@@ -100,6 +100,15 @@ export const tools: Tool[] = [
     type: 'fullstack',
     color: '#0070f3',
     tags: ['proxy', 'clash', 'subscription', 'convert', 'surge', 'yaml', 'config']
+  },
+  {
+    id: 'nginx-editor',
+    name: 'Nginx Editor',
+    description: 'Generate Nginx config from a form. Servers, locations, upstreams, SSL — fill in the blanks, get a config.',
+    categories: ['dev-tools', 'formatters'],
+    type: 'frontend',
+    color: 'var(--secondary)',
+    tags: ['nginx', 'config', 'server', 'proxy', 'ssl', 'editor', 'generate']
   }
 ];
 

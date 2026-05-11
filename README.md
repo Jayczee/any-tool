@@ -1,14 +1,8 @@
 <div align="center">
 
+<img src="https://raw.githubusercontent.com/Jayczee/any-tool/main/public/banner.png" alt="ANY-TOOL" width="500" />
+
 <br />
-
-<svg width="500" height="130" xmlns="http://www.w3.org/2000/svg">
-  <rect x="8" y="8" width="480" height="110" fill="#1a1a1a" />
-  <rect x="2" y="2" width="480" height="110" fill="#f5f5f5" stroke="#1a1a1a" stroke-width="3" />
-  <text x="250" y="78" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="63" font-weight="900" fill="#1a1a1a" letter-spacing="-3">ANY <tspan fill="#ff4d00">TOOL</tspan></text>
-</svg>
-
-<br /><br />
 
 **A bunch of useful tools. No login, no ads, just stuff that works.**
 
