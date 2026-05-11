@@ -9,7 +9,7 @@ export function LangSwitcher({ currentLang }: { currentLang: string }) {
   const targetPath = pathname.replace(`/${currentLang}`, `/${targetLang}`);
 
   return (
-    <div style={{ position: 'fixed', top: '1rem', right: '1rem', zIndex: 100 }}>
+    <div style={{ position: 'fixed', top: '1.5rem', right: '2rem', zIndex: 100 }}>
       <Link
         href={targetPath}
         style={{

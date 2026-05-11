@@ -1,120 +1,103 @@
-# ANY-TOOL
+<div align="center">
 
-A collection of high-impact, production-grade tools for modern builders. No fluff, just utility.
+<a href="https://github.com/Jayczee/any-tool"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB4PSIxNiIgeT0iMTYiIHdpZHRoPSIzNjAiIGhlaWdodD0iMTYwIiBmaWxsPSIjMWExYTFhIiAvPgogIDxyZWN0IHg9IjEwIiB5PSIxMCIgd2lkdGg9IjM2MCIgaGVpZ2h0PSIxNjAiIGZpbGw9IiNmNWY1ZjUiIHN0cm9rZT0iIzFhMWExYSIgc3Ryb2tlLXdpZHRoPSIzIiAvPgogIDx0ZXh0IHg9IjIwMCIgeT0iODAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjcyIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjMWExYTFhIiBsZXR0ZXItc3BhY2luZz0iLTMiPkFOWTwvdGV4dD4KICA8dGV4dCB4PSIyMDAiIHk9IjE0MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZjRkMDAiIGxldHRlci1zcGFjaW5nPSItMyI+VE9PTDwvdGV4dD4KPC9zdmc+" alt="ANY-TOOL" /></a>
 
-## Tools
+<br /><br />
 
-| Tool | Description | Type |
-|------|-------------|------|
-| JSON Formatter | Format, minify, validate JSON in real-time | Frontend |
-| Image Crusher | Compress images with custom resolution, quality, format | Full-stack |
-| Image Converter | Convert between PNG, JPEG, WebP, AVIF, TIFF, ICO | Full-stack |
-| Regex Lab | Match, replace, explain, benchmark, export regex patterns | Frontend |
-| Video Slicer | Trim videos with client-side ffmpeg.wasm | Frontend |
-| Video Speeder | Speed up / slow down video with audio sync | Frontend |
-| Audio Extractor | Extract MP3, WAV, AAC, OGG audio from video | Frontend |
-| Request Sender | HTTP client with curl import/export, auth, history | Full-stack |
-| Code Snapshot | Turn code into macOS or brutalist screenshots | Frontend |
-| Sub Converter | Convert proxy subscriptions with ACL4SSR rule sets | Full-stack |
+**A bunch of useful tools. No login, no ads, just stuff that works.**
 
-## Tech Stack
-
-- **Framework**: Next.js 16 (App Router)
-- **Language**: TypeScript
-- **Styling**: Brutalist CSS (hard borders, offset shadows, no radii)
-- **Image Processing**: Sharp
-- **Video Processing**: ffmpeg.wasm (client-side)
-- **Syntax Highlight**: highlight.js
-- **Screenshot Export**: html2canvas
-- **i18n**: Built-in dictionary (English / Chinese)
-
-## Getting Started
-
-```bash
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-## Docker
-
-```bash
-docker build -t any-tool .
-docker run -p 3000:3000 any-tool
-```
-
-## Project Structure
-
-```
-src/
-  app/
-    [lang]/              # i18n routes (en, zh)
-      dictionaries/      # Translation files
-      tools/             # Tool detail + browse pages
-    api/tools/           # Server-side API routes
-  components/
-    tools/               # Tool implementations
-    LangSwitcher.tsx     # Language toggle
-    ToolCard.tsx         # Shared tool card
-    SearchBox.tsx        # Fuzzy search with dropdown
-  lib/
-    tools.ts             # Tool definitions
-  proxy.ts               # Locale detection + redirect
-```
-
-## License
-
-MIT
+<br />
 
 ---
 
-# ANY-TOOL (中文)
+<br />
 
-为现代构建者打造的高冲击力、生产级工具集。拒绝花哨，只求实用。
+[English](#english) · [中文](#中文)
 
-## 工具列表
+</div>
 
-| 工具 | 简介 | 类型 |
-|------|------|------|
-| JSON 格式化 | 实时格式化、压缩、校验 JSON | 前端 |
-| 图片粉碎机 | 自定义分辨率、质量、格式压缩图片 | 全栈 |
-| 图片格式转换 | PNG / JPEG / WebP / AVIF / TIFF / ICO 互转 | 全栈 |
-| 正则实验室 | 匹配、替换、解析、性能测试、导出正则 | 前端 |
-| 视频切片机 | 客户端 ffmpeg.wasm 裁剪视频 | 前端 |
-| 视频变速器 | 加速/减速视频，音频同步变速 | 前端 |
-| 音频提取器 | 从视频提取 MP3 / WAV / AAC / OGG | 前端 |
-| 请求发送器 | HTTP 客户端，curl 导入导出，认证，历史记录 | 全栈 |
-| 代码截图 | 代码转 macOS/工具站风格截图，语法高亮 | 前端 |
-| 订阅转换 | 代理订阅链接转换，33 个 ACL4SSR 规则集 | 全栈 |
+---
 
-## 技术栈
+<br />
 
-- **框架**: Next.js 16 (App Router)
-- **语言**: TypeScript
-- **样式**: 粗野主义 CSS（硬边框、偏移阴影、无圆角）
-- **图片处理**: Sharp
-- **视频处理**: ffmpeg.wasm（客户端）
-- **代码高亮**: highlight.js
-- **截图导出**: html2canvas
-- **国际化**: 内置字典（英文 / 中文）
+<a id="english"></a>
 
-## 本地运行
+## What's here
 
-```bash
-npm install
-npm run dev
-```
+10 tools, built with Next.js and TypeScript. Some run entirely in the browser, a few need a tiny API route on the server side, and the video ones use ffmpeg compiled to WASM so there's zero upload.
 
-访问 [http://localhost:3000](http://localhost:3000)。
+[**JSON Formatter**](https://any-tool.fun/en/tools/json-formatter) — Pretty-print, minify, validate. *(browser only)*
 
-## Docker 部署
+[**Image Crusher**](https://any-tool.fun/en/tools/image-optimizer) — Compress images, resize, lock aspect ratio, pick format. *(browser + server)*
+
+[**Image Converter**](https://any-tool.fun/en/tools/image-converter) — PNG to JPEG to WebP to AVIF to ICO. *(browser + server)*
+
+[**Regex Lab**](https://any-tool.fun/en/tools/regex-tester) — Write regex, see matches highlighted, explain each token, benchmark speed, export to 6 languages. *(browser only)*
+
+[**Video Slicer**](https://any-tool.fun/en/tools/video-trimmer) — Trim video right in the browser. ffmpeg compiled to WASM. No upload. *(browser + WASM)*
+
+[**Video Speeder**](https://any-tool.fun/en/tools/video-speeder) — Speed up, slow down, timelapse, slow-mo. Audio pitch stays intact. *(browser + WASM)*
+
+[**Audio Extractor**](https://any-tool.fun/en/tools/audio-extractor) — Yank audio out of video as MP3, WAV, AAC, or OGG. *(browser + WASM)*
+
+[**Request Sender**](https://any-tool.fun/en/tools/request-sender) — Postman in a browser tab. Proxies through a server route to bypass CORS. *(browser + server)*
+
+[**Code Snapshot**](https://any-tool.fun/en/tools/code-snapshot) — Screenshot code in macOS or brutalist window frame. *(browser only)*
+
+[**Sub Converter**](https://any-tool.fun/en/tools/subconverter) — Convert proxy subscription links. 33 built-in ACL4SSR rule sets. *(browser + server)*
+
+## Run your own
 
 ```bash
-docker build -t any-tool .
-docker run -p 3000:3000 any-tool
+git clone https://github.com/Jayczee/any-tool.git
+cd any-tool && npm install && npm run dev
 ```
 
-## 许可证
+```bash
+docker build -t any-tool . && docker run -p 3000:3000 any-tool
+```
 
-MIT
+MIT.
+
+---
+
+<br />
+
+<a id="中文"></a>
+
+## 有什么
+
+10 个工具，Next.js + TypeScript 写的。大部分纯浏览器跑，有俩需要走一下服务端接口，视频相关的用 ffmpeg.wasm（编译到 WASM，不用上传文件）。
+
+[**JSON 格式化**](https://any-tool.fun/zh/tools/json-formatter) — 格式化、压缩、校验。*(纯浏览器)*
+
+[**图片粉碎机**](https://any-tool.fun/zh/tools/image-optimizer) — 压缩图片，调分辨率，锁定比例，选格式。*(浏览器 + 服务端)*
+
+[**图片格式转换**](https://any-tool.fun/zh/tools/image-converter) — PNG / JPEG / WebP / AVIF / ICO 随便转。*(浏览器 + 服务端)*
+
+[**正则实验室**](https://any-tool.fun/zh/tools/regex-tester) — 写正则，高亮匹配，逐字解析，跑分，导出 6 种语言。*(纯浏览器)*
+
+[**视频切片机**](https://any-tool.fun/zh/tools/video-trimmer) — 浏览器里直接剪视频，ffmpeg 编译成 WASM，文件不上传。*(浏览器 + WASM)*
+
+[**视频变速器**](https://any-tool.fun/zh/tools/video-speeder) — 加速、减速、延时、慢放，音频音调不变。*(浏览器 + WASM)*
+
+[**音频提取器**](https://any-tool.fun/zh/tools/audio-extractor) — 从视频里把音频扒成 MP3 / WAV / AAC / OGG。*(浏览器 + WASM)*
+
+[**请求发送器**](https://any-tool.fun/zh/tools/request-sender) — 浏览器里的 Postman，走服务端转发绕开跨域。*(浏览器 + 服务端)*
+
+[**代码截图**](https://any-tool.fun/zh/tools/code-snapshot) — 代码截成 macOS 风或本站风的图。*(纯浏览器)*
+
+[**订阅转换**](https://any-tool.fun/zh/tools/subconverter) — 代理订阅链接转换，自带 33 个 ACL4SSR 规则集。*(浏览器 + 服务端)*
+
+## 自己跑
+
+```bash
+git clone https://github.com/Jayczee/any-tool.git
+cd any-tool && npm install && npm run dev
+```
+
+```bash
+docker build -t any-tool . && docker run -p 3000:3000 any-tool
+```
+
+MIT。

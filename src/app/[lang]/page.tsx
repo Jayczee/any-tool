@@ -48,24 +48,6 @@ export default async function Home({ params }: HomePageProps) {
           </Link>
         </div>
 
-        <div style={{
-          position: 'absolute',
-          top: '0',
-          right: '0',
-          width: '150px',
-          height: '150px',
-          background: 'var(--secondary)',
-          border: 'var(--border-width) solid var(--border)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          transform: 'rotate(15deg)',
-          fontWeight: '800',
-          fontSize: '1.2rem',
-          textAlign: 'center'
-        }}>
-          {dict.home.betaBadge}
-        </div>
       </header>
 
       <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '2.5rem' }}>
