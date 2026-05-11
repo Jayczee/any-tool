@@ -14,7 +14,7 @@
 
 ## What's here
 
-10 tools, built with Next.js and TypeScript. Some run entirely in the browser, a few need a tiny API route on the server side, and the video ones use ffmpeg compiled to WASM so there's zero upload.
+11 tools, built with Next.js and TypeScript. Some run entirely in the browser, a few need a tiny API route on the server side, and the video ones use ffmpeg compiled to WASM so there's zero upload.
 
 | Tool | What it does | How it runs |
 |------|-------------|-------------|
@@ -28,6 +28,7 @@
 | Request Sender | Postman in a tab, curl import/export, proxy for CORS | Browser + Server |
 | Code Snapshot | Screenshot code in macOS or brutalist window frame | Browser only |
 | Sub Converter | Convert proxy subscriptions, 33 ACL4SSR rulesets | Browser + Server |
+| Nginx Editor | Build Nginx config with a form. Servers, locations, upstreams, SSL | Browser only |
 
 ## Run your own
 
