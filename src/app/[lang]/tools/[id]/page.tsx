@@ -10,6 +10,9 @@ import { VideoSpeed } from '@/components/tools/VideoSpeed';
 import { AudioExtractor } from '@/components/tools/AudioExtractor';
 import { RequestSender } from '@/components/tools/RequestSender';
 import { CodeSnapshot } from '@/components/tools/CodeSnapshot';
+import { ImageConverter } from '@/components/tools/ImageConverter';
+import { SubConverter } from '@/components/tools/SubConverter';
+import { LangSwitcher } from '@/components/LangSwitcher';
 
 interface ToolPageProps {
   params: Promise<{ lang: string; id: string }>;
@@ -57,6 +60,10 @@ export default async function ToolPage({ params }: ToolPageProps) {
         return <RequestSender labels={dict.requestSender} />;
       case 'code-snapshot':
         return <CodeSnapshot labels={dict.codeSnapshot} />;
+      case 'image-converter':
+        return <ImageConverter labels={dict.imageConverter} />;
+      case 'subconverter':
+        return <SubConverter labels={dict.subConverter} />;
       default:
         return (
           <div style={{ padding: '4rem', textAlign: 'center' }}>
@@ -69,6 +76,8 @@ export default async function ToolPage({ params }: ToolPageProps) {
 
   return (
     <main style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
+      <LangSwitcher currentLang={lang} />
+
       <nav style={{ marginBottom: '4rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Link href={`/${lang}`} style={{ fontWeight: '800', textTransform: 'uppercase', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           ← {dict.toolPage.backToGallery}

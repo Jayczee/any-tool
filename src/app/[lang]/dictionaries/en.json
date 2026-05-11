@@ -65,6 +65,14 @@
     "code-snapshot": {
       "name": "Code Snapshot",
       "description": "Turn code into beautiful screenshots. macOS or brutalist window chrome with syntax highlighting."
+    },
+    "image-converter": {
+      "name": "Image Converter",
+      "description": "Convert images between PNG, JPEG, WebP, AVIF, TIFF, ICO. Lossless or lossy with quality control."
+    },
+    "subconverter": {
+      "name": "Sub Converter",
+      "description": "Convert proxy subscription links between formats. Pick ACL4SSR rules, customize, generate Clash/YAML configs."
     }
   },
   "toolPage": {
@@ -328,6 +336,86 @@
     "light": "Light",
     "placeholder": "Paste or type your code here..."
   },
+  "imageConverter": {
+    "dropHere": "DROP IMAGE HERE",
+    "clickToBrowse": "OR CLICK TO BROWSE",
+    "original": "ORIGINAL",
+    "format": "Format",
+    "resolution": "Resolution",
+    "size": "Size",
+    "convertTo": "Convert To",
+    "quality": "Quality",
+    "convertIt": "CONVERT",
+    "converting": "CONVERTING...",
+    "successful": "CONVERSION SUCCESSFUL",
+    "before": "BEFORE",
+    "after": "AFTER",
+    "reduction": "Reduction",
+    "download": "DOWNLOAD",
+    "failed": "FAILED"
+  },
+  "subConverter": {
+    "subconverterUrl": "Subconverter URL",
+    "subscriptionUrl": "Subscription Link",
+    "target": "Target Format",
+    "ruleset": "Rule Set",
+    "customRules": "Custom Rules URL",
+    "include": "Include Keywords",
+    "exclude": "Exclude Keywords",
+    "rename": "Rename",
+    "emoji": "Emoji",
+    "udp": "UDP",
+    "scv": "Skip Cert Verify",
+    "tfo": "TCP Fast Open",
+    "convertIt": "CONVERT",
+    "converting": "CONVERTING...",
+    "result": "Result",
+    "subscriptionLink": "Subscription Link",
+    "copyLink": "Copy Link",
+    "copyConfig": "Copy Config",
+    "downloadConfig": "Download",
+    "copied": "Copied!",
+    "failed": "Failed",
+    "rulesetsDesc": "Select from ACL4SSR rule sets",
+    "rulesets": [
+      { "n": "ACL4SSR Online", "d": "Standard, recommended. Auto-select fastest node." },
+      { "n": "ACL4SSR Online + Adblock", "d": "Online + built-in ad blocking." },
+      { "n": "ACL4SSR Online Full", "d": "Online + all proxy groups, most comprehensive." },
+      { "n": "ACL4SSR Online Full + Adblock", "d": "Online Full + ad blocking." },
+      { "n": "ACL4SSR Online Full Google", "d": "Online Full + Google priority routing." },
+      { "n": "ACL4SSR Online Full MultiMode", "d": "Online Full + fallback, load-balance, select." },
+      { "n": "ACL4SSR Online Full Netflix", "d": "Online Full + Netflix-specific routing." },
+      { "n": "ACL4SSR Online Full NoAuto", "d": "Online Full without auto-select." },
+      { "n": "ACL4SSR Online Mini", "d": "Online lightweight, faster matching." },
+      { "n": "ACL4SSR Online Mini + Adblock", "d": "Online Mini + ad blocking." },
+      { "n": "ACL4SSR Online Mini Ai", "d": "Online Mini + AI service routing." },
+      { "n": "ACL4SSR Online Mini Fallback", "d": "Online Mini + fallback proxy group." },
+      { "n": "ACL4SSR Online Mini MultiCountry", "d": "Online Mini + multi-country node groups." },
+      { "n": "ACL4SSR Online Mini MultiMode", "d": "Online Mini + fallback, load-balance, select." },
+      { "n": "ACL4SSR Online Mini NoAuto", "d": "Online Mini without auto-select." },
+      { "n": "ACL4SSR Online MultiCountry", "d": "Online + multi-country node groups." },
+      { "n": "ACL4SSR Online NoAuto", "d": "Online without auto-select, manual only." },
+      { "n": "ACL4SSR Online NoReject", "d": "Online without REJECT rules, pass-through." },
+      { "n": "ACL4SSR Mini", "d": "Minimalist, low-resource devices." },
+      { "n": "ACL4SSR Mini Fallback", "d": "Mini + fallback proxy group." },
+      { "n": "ACL4SSR Mini MultiMode", "d": "Mini + fallback, load-balance, select." },
+      { "n": "ACL4SSR Mini NoAuto", "d": "Mini without auto-select." },
+      { "n": "ACL4SSR Back CN", "d": "Optimized for China-back access, domestic traffic direct." },
+      { "n": "ACL4SSR No Apple", "d": "Excludes Apple rules, smaller ruleset." },
+      { "n": "ACL4SSR No Microsoft", "d": "Excludes Microsoft rules." },
+      { "n": "ACL4SSR NoAuto", "d": "Base rules, manual switching only." },
+      { "n": "ACL4SSR NoAuto No Apple", "d": "No auto-select + No Apple." },
+      { "n": "ACL4SSR NoAuto No Apple No Microsoft", "d": "No auto-select + No Apple + No Microsoft." },
+      { "n": "ACL4SSR + Adblock", "d": "Base rules + ad blocking." },
+      { "n": "ACL4SSR With China IP", "d": "Includes China IP database for split routing." },
+      { "n": "ACL4SSR With China IP + GFW", "d": "China IP + GFWList combined." },
+      { "n": "ACL4SSR With GFW", "d": "Includes GFWList rules." },
+      { "n": "Custom (none)", "d": "No preset, use custom URL below." }
+    ],
+    "placeholderSubUrl": "https://sub.example.com",
+    "placeholderSubLink": "https://your-subscription-link",
+    "placeholderCustomRules": "https://raw.githubusercontent.com/.../custom.ini"
+  },
   "tags": {
     "json": "json", "format": "format", "minify": "minify", "validate": "validate",
     "image": "image", "compress": "compress", "webp": "webp", "jpg": "jpg", "png": "png", "avif": "avif", "resize": "resize",
@@ -336,7 +424,9 @@
     "speed": "speed", "timelapse": "timelapse", "slowmo": "slow-mo", "fast": "fast", "slow": "slow",
     "audio": "audio", "mp3": "mp3", "wav": "wav", "extract": "extract", "music": "music", "sound": "sound",
     "http": "http", "api": "api", "curl": "curl", "request": "request", "rest": "rest", "fetch": "fetch", "post": "post", "get": "get",
-    "code": "code", "screenshot": "screenshot", "highlight": "highlight", "export": "export", "png": "png", "share": "share"
+    "code": "code", "screenshot": "screenshot", "highlight": "highlight", "export": "export", "png": "png", "share": "share",
+    "convert": "convert", "avif": "avif",
+    "proxy": "proxy", "clash": "clash", "subscription": "subscription", "surge": "surge", "yaml": "yaml", "config": "config"
   },
   "langSwitcher": {
     "label": "中文"

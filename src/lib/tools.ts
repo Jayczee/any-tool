@@ -82,6 +82,24 @@ export const tools: Tool[] = [
     type: 'frontend',
     color: 'var(--accent)',
     tags: ['code', 'screenshot', 'highlight', 'image', 'export', 'png', 'share']
+  },
+  {
+    id: 'image-converter',
+    name: 'Image Converter',
+    description: 'Convert images between PNG, JPEG, WebP, AVIF, TIFF, ICO. Lossless or lossy with quality control.',
+    categories: ['media', 'formatters'],
+    type: 'fullstack',
+    color: 'var(--secondary)',
+    tags: ['image', 'convert', 'png', 'jpg', 'webp', 'avif', 'format']
+  },
+  {
+    id: 'subconverter',
+    name: 'Sub Converter',
+    description: 'Convert proxy subscription links between formats. Pick ACL4SSR rules, customize, generate Clash/YAML configs.',
+    categories: ['dev-tools', 'formatters'],
+    type: 'fullstack',
+    color: '#0070f3',
+    tags: ['proxy', 'clash', 'subscription', 'convert', 'surge', 'yaml', 'config']
   }
 ];
 

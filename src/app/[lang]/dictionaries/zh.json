@@ -65,6 +65,14 @@
     "code-snapshot": {
       "name": "代码截图",
       "description": "将代码转为精美截图。macOS 或工具站风格窗口边框，语法高亮。"
+    },
+    "image-converter": {
+      "name": "图片格式转换",
+      "description": "在 PNG、JPEG、WebP、AVIF、TIFF、ICO 之间转换图片。支持无损和有损质量控制。"
+    },
+    "subconverter": {
+      "name": "订阅转换",
+      "description": "转换代理订阅链接格式。选择 ACL4SSR 规则，自定义生成 Clash/YAML 等配置。"
     }
   },
   "toolPage": {
@@ -328,6 +336,86 @@
     "light": "亮色",
     "placeholder": "在此粘贴或输入代码..."
   },
+  "imageConverter": {
+    "dropHere": "拖放图片到此处",
+    "clickToBrowse": "或点击选择文件",
+    "original": "原始图片",
+    "format": "格式",
+    "resolution": "分辨率",
+    "size": "大小",
+    "convertTo": "转换为",
+    "quality": "质量",
+    "convertIt": "开始转换",
+    "converting": "转换中...",
+    "successful": "转换成功",
+    "before": "转换前",
+    "after": "转换后",
+    "reduction": "缩减",
+    "download": "下载",
+    "failed": "失败"
+  },
+  "subConverter": {
+    "subconverterUrl": "Subconverter 地址",
+    "subscriptionUrl": "订阅链接",
+    "target": "目标格式",
+    "ruleset": "规则集",
+    "customRules": "自定义规则 URL",
+    "include": "包含关键词",
+    "exclude": "排除关键词",
+    "rename": "重命名",
+    "emoji": "Emoji 标记",
+    "udp": "UDP",
+    "scv": "跳过证书验证",
+    "tfo": "TCP Fast Open",
+    "convertIt": "开始转换",
+    "converting": "转换中...",
+    "result": "转换结果",
+    "subscriptionLink": "订阅链接",
+    "copyLink": "复制链接",
+    "copyConfig": "复制配置",
+    "downloadConfig": "下载",
+    "copied": "已复制！",
+    "failed": "失败",
+    "rulesetsDesc": "选择 ACL4SSR 规则集",
+    "rulesets": [
+      { "n": "ACL4SSR Online", "d": "标准规则，推荐使用。自动选择最快节点。" },
+      { "n": "ACL4SSR Online + Adblock", "d": "Online + 内置广告屏蔽。" },
+      { "n": "ACL4SSR Online Full", "d": "Online + 全部代理组，最全面的规则。" },
+      { "n": "ACL4SSR Online Full + Adblock", "d": "Online Full + 广告屏蔽。" },
+      { "n": "ACL4SSR Online Full Google", "d": "Online Full + Google 优先路由。" },
+      { "n": "ACL4SSR Online Full MultiMode", "d": "Online Full + 故障转移、负载均衡、手动选择。" },
+      { "n": "ACL4SSR Online Full Netflix", "d": "Online Full + Netflix 专项路由。" },
+      { "n": "ACL4SSR Online Full NoAuto", "d": "Online Full 无自动选择。" },
+      { "n": "ACL4SSR Online Mini", "d": "Online 精简版，匹配更快。" },
+      { "n": "ACL4SSR Online Mini + Adblock", "d": "Online Mini + 广告屏蔽。" },
+      { "n": "ACL4SSR Online Mini Ai", "d": "Online Mini + AI 服务路由。" },
+      { "n": "ACL4SSR Online Mini Fallback", "d": "Online Mini + 故障转移代理组。" },
+      { "n": "ACL4SSR Online Mini MultiCountry", "d": "Online Mini + 多国家节点分组。" },
+      { "n": "ACL4SSR Online Mini MultiMode", "d": "Online Mini + 故障转移、负载均衡、手动选择。" },
+      { "n": "ACL4SSR Online Mini NoAuto", "d": "Online Mini 无自动选择。" },
+      { "n": "ACL4SSR Online MultiCountry", "d": "Online + 多国家节点分组。" },
+      { "n": "ACL4SSR Online NoAuto", "d": "Online 无自动选择，仅手动切换。" },
+      { "n": "ACL4SSR Online NoReject", "d": "Online 无 REJECT 规则，全部放行。" },
+      { "n": "ACL4SSR Mini", "d": "极简规则，适合低配设备。" },
+      { "n": "ACL4SSR Mini Fallback", "d": "Mini + 故障转移代理组。" },
+      { "n": "ACL4SSR Mini MultiMode", "d": "Mini + 故障转移、负载均衡、手动选择。" },
+      { "n": "ACL4SSR Mini NoAuto", "d": "Mini 无自动选择。" },
+      { "n": "ACL4SSR Back CN", "d": "优化回国访问，国内流量直连。" },
+      { "n": "ACL4SSR No Apple", "d": "移除 Apple 规则，体积更小。" },
+      { "n": "ACL4SSR No Microsoft", "d": "移除 Microsoft 规则。" },
+      { "n": "ACL4SSR NoAuto", "d": "基础规则，仅手动切换。" },
+      { "n": "ACL4SSR NoAuto No Apple", "d": "无自动选择 + 无 Apple。" },
+      { "n": "ACL4SSR NoAuto No Apple No Microsoft", "d": "无自动选择 + 无 Apple + 无 Microsoft。" },
+      { "n": "ACL4SSR + Adblock", "d": "基础规则 + 广告屏蔽。" },
+      { "n": "ACL4SSR With China IP", "d": "包含中国 IP 数据库，分流更精准。" },
+      { "n": "ACL4SSR With China IP + GFW", "d": "中国 IP + GFWList 双规则。" },
+      { "n": "ACL4SSR With GFW", "d": "包含 GFWList 规则。" },
+      { "n": "Custom (none)", "d": "无预设规则，使用下方自定义 URL。" }
+    ],
+    "placeholderSubUrl": "https://sub.example.com",
+    "placeholderSubLink": "https://你的订阅链接",
+    "placeholderCustomRules": "https://raw.githubusercontent.com/.../custom.ini"
+  },
   "tags": {
     "json": "JSON", "format": "格式化", "minify": "压缩", "validate": "校验",
     "image": "图片", "compress": "压缩", "webp": "WebP", "jpg": "JPG", "png": "PNG", "avif": "AVIF", "resize": "调整尺寸",
@@ -336,7 +424,9 @@
     "speed": "变速", "timelapse": "延时", "slowmo": "慢动作", "fast": "加速", "slow": "减速",
     "audio": "音频", "mp3": "MP3", "wav": "WAV", "extract": "提取", "music": "音乐", "sound": "声音",
     "http": "HTTP", "api": "API", "curl": "curl", "request": "请求", "rest": "REST", "fetch": "fetch", "post": "POST", "get": "GET",
-    "code": "代码", "screenshot": "截图", "highlight": "高亮", "export": "导出", "png": "PNG", "share": "分享"
+    "code": "代码", "screenshot": "截图", "highlight": "高亮", "export": "导出", "png": "PNG", "share": "分享",
+    "convert": "转换", "avif": "AVIF",
+    "proxy": "代理", "clash": "Clash", "subscription": "订阅", "surge": "Surge", "yaml": "YAML", "config": "配置"
   },
   "langSwitcher": {
     "label": "EN"
